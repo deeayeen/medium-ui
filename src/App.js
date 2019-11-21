@@ -3,7 +3,8 @@ import logo from "./logo.svg";
 import FadeIn from "react-fade-in";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import TableExample from "./TableExample";
+import TableExample from "./examples/TableExample";
+import MapExample from "./examples/MapExample";
 
 class App extends React.Component {
   constructor(props) {
