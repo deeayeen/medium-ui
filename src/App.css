@@ -3,11 +3,32 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  animation: App-logo-spin infinite 10s linear;
+  pointer-events: none;
+}
+
+.tab table,
+.tab th,
+.tab td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.cat {
+  text-align: left;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
