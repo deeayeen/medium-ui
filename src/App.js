@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: "table"
+      view: "map"
     };
   }
   render() {
@@ -33,7 +33,11 @@ class App extends React.Component {
               class="d-flex justify-content-around align-items-center"
               style={{ width: "100vw", color: "black" }}
             >
-              {this.state.view === "table" ? <TableExample /> : null}
+              {this.state.view === "table" ? (
+                <TableExample />
+              ) : this.state.view === "map" ? (
+                <MapExample />
+              ) : null}
             </div>
           </div>
         </header>
