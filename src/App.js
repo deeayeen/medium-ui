@@ -5,12 +5,13 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import TableExample from "./examples/TableExample";
 import MapExample from "./examples/MapExample";
+import NotifExample from "./examples/NotifExample";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: "map"
+      view: "notif"
     };
   }
   render() {
@@ -37,6 +38,8 @@ class App extends React.Component {
                 <TableExample />
               ) : this.state.view === "map" ? (
                 <MapExample />
+              ) : this.state.view === "notif" ? (
+                <NotifExample />
               ) : null}
             </div>
           </div>
