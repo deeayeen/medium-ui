@@ -34,7 +34,14 @@ export default function HeaderExample() {
   return (
     <div className={classes.root2}>
       <div>
-        <Headroom>
+        <Headroom
+          style={{
+            webkitTransition: "all .5s ease-in-out",
+            mozTransition: "all .5s ease-in-out",
+            oTransition: "all .5s ease-in-out",
+            transition: "all .5s ease-in-out"
+          }}
+        >
           <AppBar position="static">
             <Toolbar>
               <IconButton

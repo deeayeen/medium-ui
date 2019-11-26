@@ -13,7 +13,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: "header"
+      view: "table"
     };
   }
   render() {
@@ -52,6 +52,45 @@ class App extends React.Component {
             </div>
           </div>
         </header>
+        {
+          <div
+            class="shadow-lg"
+            style={{
+              position: "fixed",
+              backgroundColor: "white",
+              padding: "15px",
+              top: "10px",
+              left: "10px",
+              zIndex: 1000
+            }}
+          >
+            <div onClick={() => this.setState({ view: "table" })}>
+              <a href="#" style={{ margin: 0, padding: 0 }}>
+                Table Example
+              </a>
+            </div>
+            <div onClick={() => this.setState({ view: "map" })}>
+              <a href="#" style={{ margin: 0, padding: 0 }}>
+                Map Example
+              </a>
+            </div>
+            <div onClick={() => this.setState({ view: "header" })}>
+              <a href="#" style={{ margin: 0, padding: 0 }}>
+                Header Example
+              </a>
+            </div>
+            <div onClick={() => this.setState({ view: "sticky" })}>
+              <a href="#" style={{ margin: 0, padding: 0 }}>
+                List Example
+              </a>
+            </div>
+            <div onClick={() => this.setState({ view: "notif" })}>
+              <a href="#" style={{ margin: 0, padding: 0 }}>
+                Notification Example
+              </a>
+            </div>
+          </div>
+        }
       </div>
     );
   }
