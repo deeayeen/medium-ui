@@ -8,6 +8,7 @@ import {
 } from "react-google-maps";
 import ReactMapGL from "react-map-gl";
 
+var ENTER_KEY_HERE = "";
 class Map extends Component {
   state = {
     viewport: {
@@ -100,8 +101,7 @@ class Map extends Component {
 
 const MyMapComponent = compose(
   withProps({
-    googleMapURL:
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyDkG702RFFEEm08CP87sLK_amm-ru_eUVs&v=3.exp&libraries=geometry,drawing,places",
+    googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${ENTER_KEY_HERE}&v=3.exp&libraries=geometry,drawing,places`,
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `500px` }} />,
     mapElement: <div style={{ height: `100%` }} />
