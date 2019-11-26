@@ -6,12 +6,13 @@ import "bootstrap/dist/css/bootstrap.css";
 import TableExample from "./examples/TableExample";
 import MapExample from "./examples/MapExample";
 import NotifExample from "./examples/NotifExample";
+import StickyExample from "./examples/StickyExample";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: "notif"
+      view: "sticky"
     };
   }
   render() {
@@ -40,6 +41,8 @@ class App extends React.Component {
                 <MapExample />
               ) : this.state.view === "notif" ? (
                 <NotifExample />
+              ) : this.state.view === "sticky" ? (
+                <StickyExample />
               ) : null}
             </div>
           </div>
